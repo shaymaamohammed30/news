@@ -1,9 +1,11 @@
-@if (session('succes'))
- <div> class="alert alert-success">{{ session(key: 'success') }}</div>   
+@if (session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
 @endif
+
 @if (session('warning'))
- <div> class="alert alert-success">{{ session(key: 'warning') }}</div>   
+    <div class="alert alert-info">{{ session('warning') }}</div>
 @endif
+
 @if (session('danger'))
- <div> class="alert alert-success">{{ session(key: 'danger') }}</div>   
+    <div class="alert alert-danger">{{ session('danger') }}</div>
 @endif
