@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-     protected $fillable = ['title', 'content', 'category_id', 'user_id'];
+     protected $fillable = ['title', 'content', 'category_id', 'user_id','slug','type', 'image', 'video_url', 'views', 'is_breaking'];
 
     // الخبر ينتمي إلى فئة واحدة
     public function category()
@@ -19,4 +19,8 @@ class News extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }
+
